@@ -986,7 +986,6 @@ void ShowDemoWindow(bool* p_open) {
     static bool show_imgui_metrics = false;
     static bool show_imgui_style_editor = false;
     static bool show_imgui_demo = false;
-    static bool show_implot3d_metrics = false;
 
     if (show_implot3d_metrics)
         ImPlot3D::ShowMetricsWindow(&show_implot3d_metrics);
@@ -1004,9 +1003,6 @@ void ShowDemoWindow(bool* p_open) {
         ImGui::ShowMetricsWindow(&show_imgui_metrics);
     if (show_imgui_demo)
         ImGui::ShowDemoWindow(&show_imgui_demo);
-
-    if (show_implot3d_metrics)
-        ImPlot3D::ShowMetricsWindow(&show_implot3d_metrics);
 
     ImGui::SetNextWindowPos(ImVec2(100, 100), ImGuiCond_FirstUseEver);
     ImGui::SetNextWindowSize(ImVec2(600, 750), ImGuiCond_FirstUseEver);
